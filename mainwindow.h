@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QGraphicsScene> //incluir la libreria QgraphicsScene.
+#include "cuerpo.h" //incluir la clase cuerpo.
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -17,5 +18,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    //escena
+    QGraphicsScene *escena; //escena del videojuego
+
+    //cuerpos
+    Cuerpo *nave; // cuerpo prueba
 };
 #endif // MAINWINDOW_H
