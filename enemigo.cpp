@@ -119,7 +119,8 @@ void enemigo::MAS(double x, double y, int r_, double W_)
     r=r_; //radio de giro
     i=i+Rad; //angulo de giro
     posx =x+r*cos(i*W); //posicion en x
-    posy =y+abs(y+r*sin(i*W)-y); //posicion en y
+    posy =y;
+    //posy =y+abs(y+r*sin(i*W)-y); //posicion en y
     setPos(posx,posy); //dar posicion en x y y
 }
 

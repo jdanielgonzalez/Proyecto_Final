@@ -4,6 +4,7 @@
 #include "cuerpo.h" //incluir la clase cuerpo.
 #include <QMainWindow>
 #include "enemigo.h" //incluir la clase villano.
+#include "balas.h" //incluir la libreria balas.d
 #include <QKeyEvent> //libreria para las teclas.
 #include <QTimer> //lireria del timer.
 #include <QDebug> //libreria de debug.
@@ -47,6 +48,9 @@ private:
     Cuerpo *piso;
     Cuerpo *muroderecho;
     Cuerpo *muroizquierdo;
+
+    //Balas
+    balas *bala;
 
     //funciones
     void keyPressEvent(QKeyEvent * event); //funcion para las teclas
