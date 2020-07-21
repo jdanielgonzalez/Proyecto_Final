@@ -36,6 +36,9 @@ private:
     Cuerpo *nave; // cuerpo prueba
     enemigo *bola1; //enemigo bola1
     enemigo *bola2; //enemigo bola2
+    enemigo *bola3; //enemigo bola3
+    enemigo *bola4; //enemigo bola4
+    enemigo *bola5; //enemigo bola5
 
     //lista
     QList<enemigo*> enemigos; //lista de enemigos

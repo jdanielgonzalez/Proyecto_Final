@@ -21,10 +21,15 @@ class enemigo: public QGraphicsItem //heredar las funciones de QgraphicsItem.
     double pi=3.1416; //pi
     double angulo; //angulo
     int dir; //direccion 1 es hacia la derecha, direccion 2 es a la izquierda
+    int r; //radio para el MCU
+    double Rad= 0.01745329252; //radianes
+    double i=0;
+    double W; //velocidad angular
 
 public:
     enemigo(); //constructor por defecto
     enemigo(double x, double y, double ancho_, double largo_, double vi, double ang_); //sobre carga de constructor
+    enemigo(double x, double y, double ancho_, double largo_);
 
     double getPosx(); //funcion para tomar la posicion en x.
     double getPosy(); //funcion para tomar la posicion en y.
@@ -44,6 +49,10 @@ public:
     void setAngulo(double Angulo); //funcion para cambiar el angulo
 
     void actualizarvelocidad(); //funcion que actualizia la velocidad
+
+    void MCU(double x, double y, int r_, double W_, double Desfase_); //movimentiento circular uniforme
+
+    void MAS(double x, double y, int r_, double W_); //movimiento armonico simple
 
     void setDir(int dir_); //funcion para cambiar la direccion.
     int getDir(); //funcion para tomar la direccion.

@@ -15,34 +15,49 @@ MainWindow::MainWindow(QWidget *parent)
     if(nivel==1) //nivel 1
     {
         //agregar personaje principal
-        nave = new Cuerpo(475,600,50,50);
+        nave = new Cuerpo(475,600,50,50); //creo nave
         escena->addItem(nave); //agregar la nave
 
-        //agregar enemigo 1
-        bola1 = new enemigo(25,-400,50,50,20,0);
-        enemigos.push_back(bola1);
-        escena->addItem(enemigos.at(0));
-        //escena->addItem(bola1); //agregar el enemigo 1
+        //enemigo 1
+        bola1 = new enemigo(25,-400,50,50,20,0); //creo enemigo 1
+        enemigos.push_back(bola1); //agrego enemigo 1 a la lista de enemigos
+        escena->addItem(enemigos.at(0)); //añado enemigo 1 a la escena
 
-        //agregar enemigo 2
-        bola2 = new enemigo(900,-400,50,50,20,180);
-        enemigos.push_back(bola2);
-        escena->addItem(enemigos.at(1));
+        //enemigo 2
+        bola2 = new enemigo(975,-400,50,50,20,180); //creo enemigo 2
+        enemigos.push_back(bola2); //agrego enemigo 2 a la lista de enemigos
+        escena->addItem(enemigos.at(1)); //añado enemigo 2 a la escena
 
-        //agregar piso
-        piso = new Cuerpo(500,650,1000,50);
+        //enemigo 3
+        bola3 = new enemigo(500,-350,50,50); //creo enemigo 3
+        enemigos.push_back(bola3); //agrego enemigo 3 a la lista de enemigos
+        escena->addItem(enemigos.at(2)); //añado enemigo 3 a la escena
+
+        //enemigo 4
+        bola4 = new enemigo(750,-350,50,50); //creo enemigo 4
+        enemigos.push_back(bola4); //agrego enemigo 4 a la lista de enemigos
+        escena->addItem(enemigos.at(3)); //añado enemigo 4 a la escena
+
+        //enemigo 4
+        bola5 = new enemigo(500,-150,50,50); //creo enemigo 4
+        enemigos.push_back(bola5); //agrego enemigo 4 a la lista de enemigos
+        escena->addItem(enemigos.at(4)); //añado enemigo 4 a la escena
+
+        //piso
+        piso = new Cuerpo(500,650,1000,50); //creo el piso
         escena->addItem(piso); //agregar piso
 
-        //agrego muro derecho
-        muroderecho = new Cuerpo(1025,350,50,800);
+        //muro derecho
+        muroderecho = new Cuerpo(1025,350,50,800); //creo el muro derecho
         escena->addItem(muroderecho); //agregar muro derecho
 
-        //agrego muro izquierdo
-        muroizquierdo = new Cuerpo(-25,350,50,800);
+        //muro izquierdo
+        muroizquierdo = new Cuerpo(-25,350,50,800); //creo el muro izquierdo
         escena->addItem(muroizquierdo); //agregar muro izquierdo
 
-        timerenemigo = new QTimer; //timer
-        connect(timerenemigo,SIGNAL(timeout()),this,SLOT(mover_enemigo())); //mover el enemigo
+        //timer para los enemigos
+        timerenemigo = new QTimer; //creo el Qtimer
+        connect(timerenemigo,SIGNAL(timeout()),this,SLOT(mover_enemigo())); //conecto el timer al movimiento del enemigo
         timerenemigo->start(10); //iniciar timer
     }
 }
@@ -54,7 +69,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::mover_enemigo()
 {
-    for(int i=0; i<2;i++)
+    for(int i=0; i<5;i++)
     {
         //qDebug() <<"velocidad: "<<enemigos.at(i)->getVel();
         //qDebug() <<"velocidadx: "<<enemigos.at(i)->getVelx();
@@ -80,19 +95,34 @@ void MainWindow::mover_enemigo()
         }
 
         //rebote con el piso
-        if(enemigos.at(i)->collidesWithItem(piso))
+        if(enemigos.at(i)->collidesWithItem(piso)) //condicion para preguntar si colisiono con el piso
         {
-            enemigos.at(i)->rebotepiso();
+            enemigos.at(i)->rebotepiso(); //aplicar rebote
         }
         //rebote con el muro derecho
-        if (enemigos.at(i)->collidesWithItem(muroderecho))
+        if (enemigos.at(i)->collidesWithItem(muroderecho)) //condicion que pregunta si colisiono con el muro derecho
         {
-            enemigos.at(i)->setDir(2);
+            enemigos.at(i)->setDir(2); //actualizar la direccion de movimiento
         }
         //rebote con el muro izquierdo
-        if (enemigos.at(i)->collidesWithItem(muroizquierdo))
+        if (enemigos.at(i)->collidesWithItem(muroizquierdo)) //condicion que pregunta si colisiono con el muro izquierdo
         {
-            enemigos.at(i)->setDir(1);
+            enemigos.at(i)->setDir(1);//actualizar la direccion de movimiento
+        }
+
+        if(i==2) //condicion que pregunta si es el tercer enemigo
+        {
+            enemigos.at(i)->MCU(250,300,150,1,0);
+        }
+
+        if(i==3) //condicion que pregunta si es el tercer enemigo
+        {
+            enemigos.at(i)->MCU(750,300,150,1,-3.1416);
+        }
+
+        if(i==4) //condicion que pregunta si es el tercer enemigo
+        {
+            enemigos.at(i)->MAS(500,150,150,1);
         }
     }
 
