@@ -69,7 +69,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::mover_enemigo()
 {
-    for(int i=0; i<5;i++)
+    for(int i=0; i<enemigos.size();i++)
     {
         //qDebug() <<"velocidad: "<<enemigos.at(i)->getVel();
         //qDebug() <<"velocidadx: "<<enemigos.at(i)->getVelx();
@@ -147,5 +147,12 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         {
             nave->mover_izquierda();//mover hacia la izquierda
         }
+    }
+
+    if(event->key()==Qt::Key_Space)
+    {
+        balas * bala = new balas();
+        bala->setPos(nave->getPosx(),nave->getPosy()-25);
+        escena->addItem(bala);
     }
 }
