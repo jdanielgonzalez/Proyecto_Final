@@ -17,6 +17,15 @@ enemigo::enemigo(double x, double y, double ancho_, double largo_, double vi, do
     dir=1;
 }
 
+enemigo::enemigo(double x, double y, double ancho_, double largo_)
+{
+    largo=largo_; //tomar el largo
+    ancho=ancho_; //tomar el ancho
+    posx = x; //tomar la posicion inicial enx
+    posy = y; //tomar la posicion inicial en y
+    setPos(posx,-posy); //dar posicion en x y en y
+}
+
 double enemigo::getPosx()
 {
     return posx; //retorna la posicion en x.
@@ -29,12 +38,12 @@ double enemigo::getPosy()
 
 double enemigo::getVelx()
 {
-    return velx;
+    return velx; //retorna la velocdiad en x
 }
 
 double enemigo::getVely()
 {
-    return vely;
+    return vely; //retorna la velocidad en y
 }
 
 void enemigo::setVelx(double vx_)
@@ -67,7 +76,7 @@ void enemigo::setVel(double vel_)
 
 double enemigo::getVel()
 {
-    return vel;
+    return vel; //retorna la velocidad
 }
 
 double enemigo::getAngulo()
@@ -94,14 +103,34 @@ void enemigo::actualizarvelocidad()
     vel=sqrt(velx*velx+vely*vely); //v=(vx^2+vy^2)^1/2
 }
 
+void enemigo::MCU(double x, double y, int r_, double W_, double Desfase_)
+{
+    W = W_; //velocidad angular
+    r=r_; //radio de giro
+    i=i+Rad; //angulo de giro
+    posx =x+r*cos(i*W+Desfase_); //posicion en x
+    posy =y+r*sin(i*W); //posicion en y
+    setPos(posx,posy); //dar posicion en x y y
+}
+
+void enemigo::MAS(double x, double y, int r_, double W_)
+{
+    W = W_; //velocidad angular
+    r=r_; //radio de giro
+    i=i+Rad; //angulo de giro
+    posx =x+r*cos(i*W); //posicion en x
+    posy =y+abs(y+r*sin(i*W)-y); //posicion en y
+    setPos(posx,posy); //dar posicion en x y y
+}
+
 void enemigo::setDir(int dir_)
 {
-    dir=dir_;
+    dir=dir_; //dar la dirrecion
 }
 
 int enemigo::getDir()
 {
-    return dir;
+    return dir; //retornar la direccion
 }
 
 QRectF enemigo::boundingRect() const
