@@ -51,6 +51,11 @@ void enemigo::setVelx(double vx_)
     velx=vx_;
 }
 
+void enemigo::setVely(double vy_)
+{
+    vely=vy_;
+}
+
 
 void enemigo::actualizarposicion_izquierda()
 {
@@ -89,6 +94,30 @@ void enemigo::setAngulo(double angulo_)
     angulo=(angulo_/180)*pi; //darle un valor al angulo
 }
 
+void enemigo::setImagen(int imagen_)
+{
+    if(imagen_==1)
+    {
+        pixmap = new QPixmap(":/imagenes/robot.png");
+    }
+    if(imagen_==2)
+    {
+        pixmap = new QPixmap(":/imagenes/sierra.png");
+    }
+    if(imagen_==3)
+    {
+        pixmap = new QPixmap(":/imagenes/sierra_sangre.png");
+    }
+    if(imagen_==4)
+    {
+        pixmap = new QPixmap(":/imagenes/diablo.png");
+    }
+    if(imagen_==5)
+    {
+        pixmap = new QPixmap(":/imagenes/bola_fuego.png");
+    }
+}
+
 void enemigo::actualizarposicion_derecha()
 {
     posx=posx+velx*delta; //x=x0+Vx*T
@@ -113,16 +142,68 @@ void enemigo::MCU(double x, double y, int r_, double W_, double Desfase_)
     setPos(posx,posy); //dar posicion en x y y
 }
 
-void enemigo::MAS(double x, double y, int r_, double W_)
+void enemigo::MCU_horizontal(double x, double y, int r_, double W_, double Desfase_)
 {
     W = W_; //velocidad angular
     r=r_; //radio de giro
     i=i+Rad; //angulo de giro
-    posx =x+r*cos(i*W); //posicion en x
-    posy =y;
-    //posy =y+abs(y+r*sin(i*W)-y); //posicion en y
+    posx =x+r*cos(i*W+Desfase_); //posicion en x
+    posy =y+r*sin(i*W); //posicion en y
     setPos(posx,posy); //dar posicion en x y y
 }
+
+void enemigo::MAS(double x, double y, int r_, double W_,int d_)
+{
+    if(d_==1)
+    {
+        W = W_; //velocidad angular
+        r=r_; //radio de giro
+        i=i+Rad; //angulo de giro
+        posx =x+r*cos(i*W); //posicion en x
+        posy =y; //posicion en y, movimimient pendular
+        setPos(posx,posy); //dar posicion en x y y
+    }
+    if(d_==2)
+    {
+        W = W_; //velocidad angular
+        r=r_; //radio de giro
+        i=i+Rad; //angulo de giro
+        posx =x; //posicion en x
+        posy =y+r*(cos(i*W)); //posicion en y, movimimient pendular
+        setPos(posx,posy); //dar posicion en x y y
+    }
+    if(d_==3)
+    {
+        W = W_; //velocidad angular
+        r=r_; //radio de giro
+        i=i+Rad; //angulo de giro
+        posx =x; //posicion en x
+        posy =y+r*-abs(cos(i*W)); //posicion en y, movimimient pendular
+        setPos(posx,posy); //dar posicion en x y y
+    }
+
+}
+
+void enemigo::rotar(int r_)
+{
+    velocidad_rotacion+=r_; //velocidad de rotacion
+    this->setRotation(velocidad_rotacion);
+}
+
+void enemigo::setColumnas_fila(int c_, int f_)
+{
+    columnas=c_;
+    filas=f_;
+    if(f_>0)
+    {
+        largo=91;
+    }
+    if(f_==0)
+    {
+        largo=84;
+    }
+}
+
 
 void enemigo::setDir(int dir_)
 {
@@ -141,6 +222,5 @@ QRectF enemigo::boundingRect() const
 
 void enemigo::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::blue);
-    painter->drawRect(boundingRect()); //dibuja una elipse
+    painter->drawPixmap(-ancho/2,-largo/2,*pixmap,columnas,filas,ancho,largo);
 }

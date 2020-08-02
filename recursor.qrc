@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/imagenes">
+        <file>fondo_menu.jpg</file>
+        <file>bala1.png</file>
+        <file>sierra.png</file>
+        <file>robot.png</file>
+        <file>fondo_nivel1.jpg</file>
+        <file>VACIO.png</file>
+        <file>personaje_principal.png</file>
+        <file>gameover.jpg</file>
+        <file>sprite_vidas.png</file>
+        <file>partida_nueva.jpg</file>
+        <file>cargar_partida.jpg</file>
+        <file>1.jpg</file>
+        <file>2.jpg</file>
+        <file>3.jpg</file>
+        <file>pausa.png</file>
+        <file>fondo_nivel2.jpg</file>
+        <file>fondo_nivel3.jpg</file>
+        <file>sierra_sangre.png</file>
+        <file>diablo.png</file>
+        <file>bola_fuego.png</file>
+        <file>well_done.jpg</file>
+        <file>play.png</file>
+        <file>guardar.png</file>
+    </qresource>
+    <qresource prefix="/musica">
+        <file>musica_menu.mp3</file>
+        <file>musica_nivel1.mp3</file>
+        <file>musica_nivel2.mp3</file>
+        <file>musica_nivel3.mp3</file>
+        <file>musica_fuego.mp3</file>
+        <file>musica_triturado.mp3</file>
+    </qresource>
+    <qresource prefix="/gif">
+        <file>quemado.gif</file>
+        <file>triturado.gif</file>
+        <file>portal.gif</file>
+    </qresource>
+</RCC>

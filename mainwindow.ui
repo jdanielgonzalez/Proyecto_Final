@@ -30,6 +30,431 @@
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
    </widget>
+   <widget class="QPushButton" name="boton_nuevapartida">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>290</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/partida_nueva.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_cargarpartida">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>370</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/cargar_partida.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_partida2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>360</y>
+      <width>80</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/2.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_partida1">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>290</y>
+      <width>80</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/1.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_partida3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>430</y>
+      <width>80</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/3.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_regresar">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>610</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 18pt &quot;Gill Sans Ultra Bold Condensed&quot;;</string>
+    </property>
+    <property name="text">
+     <string>REGRESAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pausar">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>20</y>
+      <width>50</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/pausa.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit1">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>290</y>
+      <width>195</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>360</y>
+      <width>195</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>430</y>
+      <width>195</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_guardarpartida1">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>50</y>
+      <width>80</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/1.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_guardarpartida2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>50</y>
+      <width>80</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/2.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_guardarpartida3">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>50</y>
+      <width>80</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/3.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="guardar">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>25</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/imagenes/guardar.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Quemado">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Triturado">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>0</y>
+      <width>70</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Portal">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>560</y>
+      <width>70</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_inicio_de_sesion">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>260</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;Dimitri&quot;;
+border-image: url(:/imagenes/VACIO.png);</string>
+    </property>
+    <property name="text">
+     <string>INICIO DE SESION</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_usuario">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>300</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Dimitri&quot;;
+border-image: url(:/imagenes/VACIO.png);</string>
+    </property>
+    <property name="text">
+     <string>USUARIO</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_clave">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>340</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Dimitri&quot;;
+border-image: url(:/imagenes/VACIO.png);</string>
+    </property>
+    <property name="text">
+     <string>CLAVE</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_usuario">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>300</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_clave">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>340</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_ingresar">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>390</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Gill Sans Ultra Bold Condensed&quot;;</string>
+    </property>
+    <property name="text">
+     <string>INGRESAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_cancelar">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>425</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 13pt &quot;Gill Sans Ultra Bold Condensed&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>CANCELAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_eliminar">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>460</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Gill Sans Ultra Bold Condensed&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ELIMINAR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="boton_volveralmenu">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>610</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 18pt &quot;Gill Sans Ultra Bold Condensed&quot;;</string>
+    </property>
+    <property name="text">
+     <string>MENU</string>
+    </property>
+   </widget>
+   <zorder>graphicsView</zorder>
+   <zorder>boton_nuevapartida</zorder>
+   <zorder>boton_cargarpartida</zorder>
+   <zorder>boton_partida1</zorder>
+   <zorder>boton_partida2</zorder>
+   <zorder>boton_partida3</zorder>
+   <zorder>boton_regresar</zorder>
+   <zorder>pausar</zorder>
+   <zorder>lineEdit1</zorder>
+   <zorder>lineEdit2</zorder>
+   <zorder>lineEdit3</zorder>
+   <zorder>guardar</zorder>
+   <zorder>boton_guardarpartida1</zorder>
+   <zorder>boton_guardarpartida3</zorder>
+   <zorder>boton_guardarpartida2</zorder>
+   <zorder>Quemado</zorder>
+   <zorder>Triturado</zorder>
+   <zorder>Portal</zorder>
+   <zorder>label_inicio_de_sesion</zorder>
+   <zorder>label_usuario</zorder>
+   <zorder>label_clave</zorder>
+   <zorder>lineEdit_usuario</zorder>
+   <zorder>lineEdit_clave</zorder>
+   <zorder>boton_ingresar</zorder>
+   <zorder>boton_cancelar</zorder>
+   <zorder>boton_eliminar</zorder>
+   <zorder>boton_volveralmenu</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
