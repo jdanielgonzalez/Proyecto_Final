@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui \
+         multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,13 +21,19 @@ SOURCES += \
     cuerpo.cpp \
     enemigo.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    porcentaje.cpp \
+    puntaje.cpp \
+    salud.cpp
 
 HEADERS += \
     balas.h \
     cuerpo.h \
     enemigo.h \
-    mainwindow.h
+    mainwindow.h \
+    porcentaje.h \
+    puntaje.h \
+    salud.h
 
 FORMS += \
     mainwindow.ui
@@ -37,4 +44,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Recursos.qrc
+    recursor.qrc
