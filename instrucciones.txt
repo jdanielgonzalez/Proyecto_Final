@@ -1,0 +1,5 @@
+subo dos archivos comprimidos, porque juntos
+pesan 28mb y gitHub solo permite 25mb por 
+archivo, solo es necesario descomprimir 
+ambos archivos y el archivo videojuego.exe 
+moverlo a la carpeta RANDA_ZMAZH.
